@@ -1,0 +1,51 @@
+body {
+    background-color: cyan;
+    border: 1px solid black;
+}
+div.footer{
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    width: 1320px;
+
+}
+#h1{
+    border: 1px dotted red;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 250px;
+    margin-right: 250px;
+    color: black;
+    font-family: arial;
+    text-align: center;
+}
+div.sessao1{
+    background-color: rgb(250,250,150);
+    color:black;
+    margin:50px;
+    padding:10px;
+   width: 1200px;
+   height: 500px;
+   border: 2px solid red;
+}
+div.sessao2{
+    background-color: rgb(250,50,150);
+    color:black;
+    margin:50px;
+    padding:10px;
+   width: 1200px;
+   height: 500px;
+   border: 2px solid red;
+}
+
+div.sessao3{
+    background-color: blue;
+    color:white;
+    margin:50px;
+    padding:10px;
+    width: 1200px;
+    height: 250px;
+    border: 2px solid red;
+}

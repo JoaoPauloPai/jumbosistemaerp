@@ -1,0 +1,134 @@
+*Todas as atualizações realizada no sistema até 
+*Dezembro/2016
+--------------------------------------------------------------
+21/12/2016  19:15
+*atualizar para a versão 2.1.01
+*já consigo implantar o arquivo .war para rodar em servidor
+*realizei algumas alterações no arquivo .jnlp
+
+*modulo sintegra está com erros
+---------------------------------------------------------------
+01/12/2016   20:49
+*Estou em Campo Novo no momento
+*hoje meu Niver 5.0 também não poderia deixar de comentar
+*forms ate a letra "C" estão sendo atualizados os tamanhos da grid
+*Atualizei para versão 2.09
+-----------------------------------------------------------------
+24/11/2016     21:26
+*alterei o arquivo index.jsp
+*as classes AgenciaBancoGrid e PessoaGrid estão corretas
+23/11/2016  18:32
+*Está dando erro no hibernat
+*alterei a classe AgenciaBancoGrid e PessoalGrid
+---------------------------------------------------------------
+17/11/2016   23:07
+*add o arquivo .css para encorpar a página Indéx
+*a aplicação está rodando perfeitamente, exeto NFe
+*o módulo NFe está dando erros e não mostra onde
+-------------------------------------------------------------
+*Ps. estou em brasilia não poderia deixar de comentar
+15/11/2016   19:01
+*atualizar projeto para a versão 2.07
+*cadastros de usuarios e papel estao corretos
+*Projeto está rodando perfeito
+*todas as classes ainda comentadas
+*Classe comentada UsuarioDetalheCotroler
+--------------------------------------------------------------
+*TrasnportadoraDetalheAction     "      "
+*SindicatoDetalheAction          "      "
+*OperadoraPlanoSaudeDetalheAction       "
+*OperadoraCartaoDetalheAction    "      "
+*FornecedorDetalheAction "       "
+*ContaCaixaDetalheAction  "      "
+*ConvenioDetalheAction ""
+*ClienteDetalheAction codigo comentado
+*ColaboradorDetalheAction codigo comentado
+----------------------------------------------------------------
+13/11/2016        20:25
+*tentar uma nova forma para vê se consigo atualizar
+*editei para 2.06a e vou atualizar esta para 2.06
+*muitos  erros na versão 2.06, tive q abandonar 
+----------------------------------------------------------
+12/11/16    07:04
+*atualizar verssão para ..2.06
+*tentar atualizar os VOs do pacote cadastro base
+------------------------------------------------------------------
+10/11/2016   21:35
+*instalei o server tomcat na maquina do Jr mas não faz conecxao
+*passei todo o dia, ou quase todo tentaando entender o pq de diferentes bancos
+*bancos com tabelas diferentes 
+--------------------------------------------------
+08/11/2016 20:55
+*Comentei códigos Classe ColaboradorGridAction
+*módulo NFe não roda no DER 2.03
+*módulo cadastros não roda no DER2.04
+*DER 2.04  com tabelas diferente da versão anterior
+*muitos erros 
+-----------------------------------------
+07/11/2016  21:24
+*também tenho que instalar o banco DER2.004
+*módulo NFe está rodando, mas não tenho net e certificado
+*adicionando o módulo NFe
+*atualizando para a versão jumbo2.05
+----------------------------------------------------------
+05/11/2016 19:19
+*adicionar o modulo spedContribuições
+*aplicação rodanco fora da EDE através do arquivo .war
+*modulo spedFiscal atualizado
+------------------------------------------------------------
+04/11/2014 20:58
+*agora partir para uma nova etapa
+*o projeto voltou novamente a funcionar
+*renomeei a classe actionFuncion do pacote servidor
+04/11/2016  17:14
+*nao consegui fazer as modificações
+*por enquanto abandonar o projeto
+*tentar fazer as devidas modificações para rodar em duas e três camadas
+----------------------------------------------------------------------------
+17/10/2016 21:48
+*versao 2.03 rodando perfeitamente
+*renomeei todas as classes do pacote padrao.servidor
+*modulo sintegra atualizado 
+-------------------------------------------------------------------------
+17/10/2016 16:20
+*versao 2.02
+*todos os forms atualizados para JUMBO
+-------------------------------------------------------------------------
+16/10/2016 18:05
+*esta dando erro pasta produto nao tem log getProduto
+*atualizei ate a letra 'P' todos os modulos
+*atualizei os modulos cadastros para adm.com.jumbo..
+*atualisei os forms ate a letra 'O'
+*resolvido problema classe pessoaDetalheController.
+-----------------------------------------------------------------------
+codigo comentado classe pessoaDetalheController pacote cadastros.cliente
+  // pessoaDetalhe.getEnderecoController().setPessoa(pessoa);
+---------------------------------------------------
+15/10/2016 14:00
+*Versao2.01 atualizada todos os modulos foram alterados
+com.t2tierp.. para com.jumbo..
+*modulo cadastros base sofre as primeiras alterações
+*aqui começa o projeto
+********************************************************************************
+Refente aos Forms
+-------------------------------------------------------------------------------
+*Atualizações referente até a data
+*Dezembro/2016
+-------------------------------------------
+aumentar 20 no form pessoa
+alterei até a letra O
+*CFOP/ NCM/ 
+form 900
+*Produto/
+form 1100
+almentar 30 nome COLAORADOR
+diminuir 50 do nome COLABORADOR
+ALTERA AGENCIA BANCO_nome banco
+alterei-só conferir
+ALTERA ALMOXARIFADO
+*forms tam 1100/500 700/400  900/450
+*alterei até a letra C
+----------------------------------------------
+*ajustar o módulo cadastro base
+*alterar os formes
+*alterar e formatar o look-ups

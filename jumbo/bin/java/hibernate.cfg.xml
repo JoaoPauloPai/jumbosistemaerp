@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--
+        Define a profundidade máxima para a árvore "outer join" para
+        associações (one-to-one, many-to-one). O valor 0 desativa o outer join.
+        Valor recomendado: entre 0 e 3
+        -->
+        <property name="hibernate.max_fetch_depth">1</property>
+        <!-- Habilita a busca por "outer join" -->
+        <property name="hibernate.use_outer_join">true</property>
+        <!--
+        Número máximo de conexões JDBC - não deve ser utilizado em produção.
+        Será criado arquivo específico com as definições do Pool de conexões.
+        -->
+        <property name="connection.pool_size">10</property>
+        <!-- Dialeto SQL -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!--
+        Gerenciamento automatico da sessão pelo Hibernate (session-per-request).
+        -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.cache.use_query_cache">false</property>
+        <!--<property name="hibernate.connection.isolation">2</property>-->
+        <!-- Mostra o código SQL no console -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- classes mapeadas -->
+        <!--Classes pacote cadastros -->
+        <mapping class="adm.com.jumbo.cadastros.java.AgenciaBancoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.AlmoxarifadoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.AtividadeForCliVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.BancoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.CargoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.CfopVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ChequeVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ClienteVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.CnaeVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ColaboradorRelacionamentoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ColaboradorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ContaCaixaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ContadorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ContribSindPatronalCabVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ContribSindPatronalDetVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ConvenioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaCnaeVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaContatoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaEnderecoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaPessoaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaProdutoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaTelefoneVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaTransporteItinerarioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaTransporteVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EmpresaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.EstadoCivilVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FeriadosVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FichaTecnicaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FornecedorProdutoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FornecedorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FpasVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.FuncaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.MoedaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.MunicipioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.NcmVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.NivelFormacaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.OperadoraCartaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.OperadoraPlanoSaudeVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PaisVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PapelFuncaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PapelVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaAlteracaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaContatoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaEnderecoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaFisicaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaJuridicaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaTelefoneVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.PessoaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoAlteracaoItemVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoCodigoAdicionalVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoGrupoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoMarcaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoPromocaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoSubGrupoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.ProdutoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.QuadroSocietarioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SetorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SindicatoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SituacaoColaboradorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SituacaoForCliVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SocioDependenteVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SocioParticipacaoSocietariaVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.SocioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TabelaPrecoProdutoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TabelaPrecoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TalonarioChequeVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TipoAdmissaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TipoColaboradorVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TipoDesligamentoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TipoRelacionamentoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TransportadoraMunicipioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.TransportadoraVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.UfVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.UnidadeConversaoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.UnidadeProdutoVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.UsuarioVO"/>
+        <mapping class="adm.com.jumbo.cadastros.java.VendedorVO"/>
+        <!-- Classes pacote contabilidade -->
+        <mapping class="adm.com.jumbo.contabilidade.java.ContabilContaVO"/>
+        <mapping class="adm.com.jumbo.contabilidade.java.PlanoContaRefSpedVO"/>
+        <mapping class="adm.com.jumbo.contabilidade.java.PlanoContaVO"/>
+        <!-- Classes pacote escritaFiscal -->
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalApuracaoIcmsVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalEstadualPorteVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalEstadualRegimeVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalInscricoesSubstitutasVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalLivroVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalMunicipalRegimeVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalNotaFiscalEntradaVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalNotaFiscalSaidaVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalParametroVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.FiscalTermoVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.SimplesNacionalCabecalhoVO"/>
+        <mapping class="cof.com.jumbo.escritafiscal.java.SimplesNacionalDetalheVO"/>
+        <!-- Classes pacote pafEcf -->
+        <mapping class="cof.com.jumbo.pafecf.java.EcfAliquotasVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfCaixaVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfDocumentosEmitidosVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfImpressoraVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfFechamentoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfMovimentoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfNotaFiscalCabecalhoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfNotaFiscalDetalheVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfR02VO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfR03VO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfR06VO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfR07VO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfRecebimentoNaoFiscalVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfSangriaVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfSintegra60aVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfSintegra60mVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfSuprimentoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfTipoPagamentoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfTotalTipoPagamentoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfTurnoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfVendaCabecalhoVO"/>
+        <mapping class="cof.com.jumbo.pafecf.java.EcfVendaDetalheVO"/>
+        <!-- Classes pacote Sped -->
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC190VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC300VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC321VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC370VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC390VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC425VoId"/>
+        <mapping class="cof.com.jumbo.sped.java.ViewSpedC490VoId"/>
+        <!-- Classes pacote vendas -->
+        <mapping class="com.com.jumbo.vendas.java.CondicoesPagamentoVO"/>
+        <mapping class="com.com.jumbo.vendas.java.NotaFiscalModeloVO"/>
+        <mapping class="com.com.jumbo.vendas.java.NotaFiscalTipoVO"/>
+        <mapping class="com.com.jumbo.vendas.java.VendaCabecalhoVO"/>
+        <mapping class="com.com.jumbo.vendas.java.VendaOrcamentoCabecalhoVO"/>
+        <mapping class="com.com.jumbo.vendas.java.VendaRomaneioEntregaVO"/>
+        <!-- Classes pacote nfe  -->
+
+        <mapping class="com.com.jumbo.nfe.java.NfeCabecalhoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeCanaDeducoesSafraVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeCanaFornecimentoDiarioVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeCanaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeConfiguracaoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeCteReferenciadoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeCupomFiscalReferenciadoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDeclaracaoImportacaoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDestinatarioVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetEspecificoArmamentoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetEspecificoCombustivelVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetEspecificoMedicamentoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetEspecificoVeiculoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoCofinsVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoIcmsVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoIiVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoIpiVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoIssqnVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheImpostoPisVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDetalheVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeDuplicataVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeEmitenteVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeFaturaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeImportacaoDetalheVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeLocalEntregaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeLocalRetiradaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeNfReferenciadaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeNumeroVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeProcessoReferenciadoVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeProdRuralReferenciadaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeReferenciadaVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeTransporteReboqueVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeTransporteVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeTransporteVolumeLacreVO"/>
+        <mapping class="com.com.jumbo.nfe.java.NfeTransporteVolumeVO"/>
+        <!-- Classes pacote tributação -->
+        <mapping class="com.com.jumbo.tributacao.java.TributGrupoTributarioVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.TributIcmsCustomCabVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.TributIssVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.TributOperacaoFiscalVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.ViewTributacaoCofinsVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.ViewTributacaoIcmsCustomVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.ViewTributacaoIcmsVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.ViewTributacaoIpiVO"/>
+        <mapping class="com.com.jumbo.tributacao.java.ViewTributacaoPisVO"/>
+
+
+    </session-factory>
+</hibernate-configuration>

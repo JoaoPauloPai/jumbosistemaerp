@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Jumbo2.0" default="default" basedir=".">
+    <description>construção do projeto T2Ti ERP.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <!--
+    essa target vai invocar:
+        signlib - para assinar os jars que compõem a aplicação do cliente
+        t2tierp - para montar o pacote necessario para a aplicação que desce
+                  para o cliente
+    -->
+    <target name="-post-compile" depends="signlib, jumbo">
+        <echo>Executando target '-post-compile'</echo>
+    </target>
+    <!-- assina os jars que compõem a aplicação do cliente -->
+    <target name="signlib" description="Assina os JARs">
+        <echo>Executando target 'signlib'</echo>
+        <mkdir dir="${build}/${signedlib}"/>
+        <copy todir="${build}/${signedlib}">
+            <fileset dir="${lib}/openswing">
+                <include name="iText-2.1.7.jar" />
+                <include name="clientos.jar" />
+                <include name="commonos.jar" />
+                <include name="jcalendar.jar" />
+                <include name="jnlp.jar" />
+                <include name="hessian-3.1.6.jar" />
+                <include name="log4j-1.2.7.jar" />
+            </fileset>
+            <fileset dir="${lib}/liquidnf">
+                <include name="liquidlnf.jar" />
+            </fileset>
+        </copy>
+        <echo>${alias}</echo>
+        <echo>${storepass}</echo>
+        <echo>${keystore}</echo>
+        
+        <signjar
+            alias="${alias}" keystore="${keystore}"
+            storepass="${storepass}">  
+           <!-- tsaurl="https://timestamp.geotrust.com/tsa"--> 
+            <path>
+                <fileset dir="${build}/${signedlib}/" includes="*.jar" />
+            </path>
+        </signjar>        
+        
+    </target>
+
+    <target name="jumbo">
+        <echo>Executando a target 'jumbo'</echo>
+
+        <echo>Procedimentos para criação do JUMBOCliente.jar</echo>
+        <mkdir dir="${tmp}" />
+        <copy todir="${web.docbase.dir}">
+            <fileset dir="${build}/${signedlib}">
+                <include name="*.jar" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/adm/com/jumbo/cadastros/cliente">
+            <fileset dir="${build.classes.dir}/adm/com/jumbo/cadastros/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+            
+        <copy todir="${tmp}/adm/com/jumbo/cadastros/java">
+            <fileset dir="${build.classes.dir}/adm/com/jumbo/cadastros/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>    
+      
+   
+        <copy todir="${tmp}/adm/com/jumbo/contabilidade/java">
+            <fileset dir="${build.classes.dir}/adm/com/jumbo/contabilidade/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/adm/com/jumbo/padrao/cliente">
+            <fileset dir="${build.classes.dir}/adm/com/jumbo/padrao/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/adm/com/jumbo/padrao/java">
+            <fileset dir="${build.classes.dir}/adm/com/jumbo/padrao/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/com/com/jumbo/tributacao/java">
+            <fileset dir="${build.classes.dir}/com/com/jumbo/tributacao/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/ged/java">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/ged/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/com/com/jumbo/nfe/java">
+            <fileset dir="${build.classes.dir}/com/com/jumbo/nfe/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/pafecf/java">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/pafecf/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/sintegra/cliente">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/sintegra/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/sintegra/java">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/sintegra/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/escritafiscal/java">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/escritafiscal/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/cof/com/jumbo/sped/cliente">
+            <fileset dir="${build.classes.dir}/cof/com/jumbo/sped/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+        <copy todir="${tmp}/com/com/jumbo/vendas/java">
+            <fileset dir="${build.classes.dir}/com/com/jumbo/vendas/java">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+        
+         
+        <copy todir="${tmp}/com/com/jumbo/nfe/cliente">
+            <fileset dir="${build.classes.dir}/com/com/jumbo/nfe/cliente">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+      
+
+        <copy todir="${tmp}/images">
+            <fileset dir="${build.classes.dir}/images">
+                <include name="*.*" />
+            </fileset>
+        </copy>
+
+        <copy todir="${tmp}/">
+            <fileset dir="${build.classes.dir}/">
+                <include name="Resources_*.xml" />
+            </fileset>
+        </copy>
+
+        <jar jarfile="${tmp}/JUMBOCliente.jar" basedir="${tmp}" manifest="manifest.txt"/> 
+        <signjar jar="${tmp}/JUMBOCliente.jar" alias="${alias}"
+                 storepass="${storepass}" keystore="${keystore}"/> <!--  tsaurl="https://timestamp.geotrust.com/tsa"/-->     
+
+        <copy todir="${web.docbase.dir}">
+            <fileset dir="${tmp}">
+                <include name="JUMBOCliente.jar" />
+            </fileset>
+        </copy>
+        <delete dir="${tmp}" />
+    </target>
+    
+    <target name="-post-clean">
+        <delete>
+            <fileset dir="${web.docbase.dir}/" >
+                <include name="*.jar" />
+            </fileset>
+        </delete>
+    </target>
+
+</project>
