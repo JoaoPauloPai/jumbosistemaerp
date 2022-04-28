@@ -26,7 +26,7 @@ import org.openswing.swing.util.server.HibernateUtils;
  *
  * <p>The MIT License</p>
  *
- * <p>Copyright: Copyright (C) 2010 T2Ti.COM</p>
+ * <p>Copyright: Copyright (C) 2010 JUMBO SISTEMAS</p>
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -50,9 +50,9 @@ import org.openswing.swing.util.server.HibernateUtils;
  * OTHER DEALINGS IN THE SOFTWARE.
  *
  *       The author may be contacted at:
- *           t2ti.com@gmail.com</p>
+ *           jumbosistemas@gmail.com</p>
  *
- * @author Claudio de Barros (T2Ti.COM)
+ * @author Joao Paulo Gomes (jumbo.com)
  * @version 1.0
  */
 public class ValidaPapelAction implements Action{

@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  * 
- * The author may be contacted at: t2ti.com@gmail.com
+ * The author may be contacted at: jumbosistemas@gmail.com
  *
  * @author João Paulo Gomes (jumbo.com)
  * @version 2.0

@@ -1,7 +1,7 @@
 /*
 * The MIT License
 * 
-* Copyright: Copyright (C) 2014 T2Ti.COM
+* Copyright: Copyright (C) 2014 JUMBO SISTEMAS
 * 
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +21,9 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 * THE SOFTWARE.
 * 
-* The author may be contacted at: t2ti.com@gmail.com
+* The author may be contacted at: jumbosistemas@gmail.com
 *
-* @author Claudio de Barros (T2Ti.com)
+* @author Joao Paulo Gomes (jumbo.com)
 * @version 2.0
 */
 package cof.com.jumbo.sped.efd.bloco0;

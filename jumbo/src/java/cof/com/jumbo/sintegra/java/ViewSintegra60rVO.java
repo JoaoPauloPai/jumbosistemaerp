@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
  *
  * <p>The MIT License
  *
- * <p>Copyright: Copyright (C) 2010 T2Ti.COM
+ * <p>Copyright: Copyright (C) 2010 JUMBO SISTEMAS
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -39,9 +39,9 @@ import javax.persistence.TemporalType;
  * OTHER DEALINGS IN THE SOFTWARE.
  *
  *        The author may be contacted at:
- *            t2ti.com@gmail.com</p>
+ *            jumbosistemas@gmail.com</p>
  *
- * @author Claudio de Barros (t2ti.com@gmail.com)
+ * @author Claudio de Barros (jumbosistemas@gmail.com)
  * @version 1.0
  */
 @Embeddable

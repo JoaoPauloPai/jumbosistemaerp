@@ -20,7 +20,7 @@ import org.openswing.swing.util.client.ClientUtils;
 *
 * <p>The MIT License</p>
 *
-* <p>Copyright: Copyright (C) 2010 T2Ti.COM
+* <p>Copyright: Copyright (C) 2010 JUMBO SISTEMAS
 *
 * Permission is hereby granted, free of charge, to any person
 * obtaining a copy of this software and associated documentation
@@ -44,9 +44,9 @@ import org.openswing.swing.util.client.ClientUtils;
 * OTHER DEALINGS IN THE SOFTWARE.
 *
 *        The author may be contacted at:
-*            t2ti.com@gmail.com</p>
+*            jumbosistemas@gmail.com</p>
 *
-* @author Claudio de Barros (t2ti.com@gmail.com)
+* @author Claudio de Barros (jumbosistemas@gmail.com)
 * @version 1.0
 */
 public class PapelGridController extends GridController implements GridDataLocator {
